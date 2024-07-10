@@ -1,0 +1,17 @@
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.csproj.AssemblyReference.cache
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.AssemblyInfoInputs.cache
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.AssemblyInfo.cs
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.csproj.CoreCompileInputs.cache
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\bin\Debug\net6.0\Repositorio.deps.json
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\bin\Debug\net6.0\Repositorio.runtimeconfig.json
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\bin\Debug\net6.0\Repositorio.dll
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\bin\Debug\net6.0\Repositorio.pdb
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\bin\Debug\net6.0\Dominio.dll
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\bin\Debug\net6.0\Dominio.pdb
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.csproj.CopyComplete
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.dll
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\refint\Repositorio.dll
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.pdb
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.genruntimeconfig.cache
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Repositorio\obj\Debug\net6.0\ref\Repositorio.dll

@@ -1,0 +1,11 @@
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\bin\Debug\net6.0\Dominio.deps.json
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\bin\Debug\net6.0\Dominio.dll
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\bin\Debug\net6.0\Dominio.pdb
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfoInputs.cache
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfo.cs
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.dll
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\obj\Debug\net6.0\refint\Dominio.dll
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.pdb
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalBackEnd\Dominio\obj\Debug\net6.0\ref\Dominio.dll
