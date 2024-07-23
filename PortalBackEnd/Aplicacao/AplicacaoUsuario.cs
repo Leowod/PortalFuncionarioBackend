@@ -1,7 +1,6 @@
 using Dominio;
 using Repositorio;
 
-namespace Aplicacao;
 
 public class AplicacaoUsuario : IAplicacaoUsuario
 {
@@ -53,7 +52,7 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         throw new NotImplementedException();
     }
 
-    public async Task<Usuario> Logar(string nomeUsuario, string senha)
+    public Task<Usuario> Logar(string nomeUsuario, string senha)
     {
         // if (!string.IsNullOrEmpty(nomeUsuario) || !string.IsNullOrEmpty(senha))
         //     throw new Exception("Credenciais inválidas!");

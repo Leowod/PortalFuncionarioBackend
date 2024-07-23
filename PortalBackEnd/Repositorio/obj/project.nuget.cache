@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nM+aLuctwd1MyEUfrJQb2unzdIC44QIG0YZVo9kW+t169HdZLjHCpdBVbw0er8ch2Fwlr/d+x/gpHLyZkRQtzA==",
+  "dgSpecHash": "gpDX+oWjlTsx/wmsg2V4ESUaKEGVv5Quv0OYIkT95XqSV7Wn7cQt81xrl3cCKWNw4F0i6YteGSt8U8AKyL6/BQ==",
   "success": true,
-  "projectFilePath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalBackEnd\\Repositorio\\Repositorio.csproj",
+  "projectFilePath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iterative\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\iterative\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

@@ -70,8 +70,8 @@ public class UsuarioController : Controller
 
     }
 
-    [HttpPost("Criar")]
-    public async Task<IActionResult> UsuarioCriarAsync([FromBody] UsuarioCriar usuario)
+    [HttpPost("Cadastrar")]
+    public async Task<IActionResult> UsuarioCadastrarAsync([FromBody] UsuarioCriar usuario)
     {
         try
         {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "252iXIy1FzcJ/UiBlhHEmFBTNkQg3tmqj7C+uBwsKHtRiaK8CZJ/HKcXKQDfd9DDfpNP8ON7HX+Gr6fZEALYoQ==",
+  "dgSpecHash": "zeMiJOn/5TzB9BqeoyCbNtVfSngXVX4vUGOuzQLgCNrN+S/9/yBsqdwHF9qYwTJaT4yK/S6aSBOsPHdoA+dgvw==",
   "success": true,
-  "projectFilePath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalBackEnd\\Dominio\\Dominio.csproj",
+  "projectFilePath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iterative\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
     "C:\\Users\\iterative\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
