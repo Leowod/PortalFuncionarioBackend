@@ -5,7 +5,7 @@ public interface IAplicacaoUsuario
 {
     Task<int> CriarAsync(Usuario usuario);
     Task AtualizarAsync(Usuario usuario);
-    Task<Usuario> Logar(string telefone, string senha);
+    Task<Usuario> Logar(string cpf, string senha);
     Task AlterarSenhaAsync(Usuario usuario, string novaSenha);
     Task DeletarAsync(int id);
     Task RestaurarAsync(int id);

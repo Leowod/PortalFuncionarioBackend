@@ -10,7 +10,7 @@ namespace Api;
 public class UsuarioController : Controller
 {
     private readonly IAplicacaoUsuario _aplicacaoUsuario;
-    
+
     public UsuarioController(IAplicacaoUsuario aplicacaoUsuario)
     {
         _aplicacaoUsuario = aplicacaoUsuario;
@@ -23,12 +23,11 @@ public class UsuarioController : Controller
     }
 
     [HttpGet("Obter/{usuarioId}")]
-    public async Task<IActionResult> ObterUsuarioPorIdAsync([FromRoute] int usuarioId)
+    public async Task<ActionResult<UsuarioResposta>> ObterUsuarioPorIdAsync([FromRoute] int usuarioId)
     {
         try
         {
             var usuario = await _aplicacaoUsuario.ObterAsync(usuarioId);
-
             var usuarioResposta = new UsuarioResposta()
             {
                 Id = usuario.UsuarioId,
@@ -45,6 +44,7 @@ public class UsuarioController : Controller
             return BadRequest(ex.Message);
         }
     }
+
 
     [HttpGet("Listar")]
     public async Task<IActionResult> ListarAsync([FromQuery] bool ativo)
@@ -67,7 +67,6 @@ public class UsuarioController : Controller
         {
             return BadRequest(ex.Message);
         }
-
     }
 
     [HttpPost("Cadastrar")]
@@ -77,7 +76,7 @@ public class UsuarioController : Controller
         {
             var criarUsuario = new Usuario()
             {
-                Nome = usuario.Nome, 
+                Nome = usuario.Nome,
                 CPF = usuario.CPF,
                 Senha = usuario.Senha,
                 Telefone = usuario.Telefone,
@@ -93,18 +92,18 @@ public class UsuarioController : Controller
     }
 
     [HttpPut("Atualizar/{id}")]
-    public async Task<IActionResult> UsuarioAtualizarAsync([FromBody] UsuarioAtualizar usuarioAtualizar)
+    public async Task<IActionResult> UsuarioAtualizarAsync([FromRoute] int id, [FromBody] UsuarioAtualizar usuarioAtualizar)
     {
         try
         {
-            Usuario usuario = new Usuario()
+            var usuario = new Usuario()
             {
-                UsuarioId = usuarioAtualizar.Id,
+                UsuarioId = id,
                 Nome = usuarioAtualizar.Nome,
                 Sobrenome = usuarioAtualizar.Sobrenome,
-                Senha = usuarioAtualizar.Senha,
                 Telefone = usuarioAtualizar.Telefone,
             };
+
             await _aplicacaoUsuario.AtualizarAsync(usuario);
 
             return Ok();
@@ -115,44 +114,43 @@ public class UsuarioController : Controller
         }
     }
 
-    // [HttpPut("AlterarSenha")]
-    // public async Task<IActionResult> AlterarSenhaAsync([FromBody] UsuarioAlterarSenha usuarioAlterarSenha)
-    // {
-    //     Usuario usuario = new Usuario()
-    //     {
-    //         ID = usuarioAlterarSenha.Id,
-    //     };
 
-    //     usuario.AlterarSenha(usuarioAlterarSenha.Senha);
+    [HttpPut("AlterarSenha")]
+    public async Task<IActionResult> AlterarSenhaAsync([FromBody] UsuarioAlterarSenha usuarioAlterarSenha)
+    {
+        if (usuarioAlterarSenha.NovaSenha == null)
+        {
+            return BadRequest("A nova senha não pode ser nula.");
+        }
 
-    //     try
-    //     {
-    //         await _aplicacaoUsuario.AlterarSenhaAsync(usuario, usuarioAlterarSenha.NovaSenha);
-    //     }
-    //     catch (Exception ex)
-    //     {
-    //         return BadRequest(ex.Message);
-    //     }
+        try
+        {
+            Usuario usuario = new Usuario()
+            {
+                UsuarioId = usuarioAlterarSenha.Id
+            };
 
-    //     return Ok();
-    // }
+            await _aplicacaoUsuario.AlterarSenhaAsync(usuario, usuarioAlterarSenha.NovaSenha);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
 
     [HttpPost("Logar")]
     public async Task<IActionResult> LogarAsync([FromBody] UsuarioAutenticar usuarioAutenticar)
     {
+        if (usuarioAutenticar.CPF == null || usuarioAutenticar.Senha == null)
+        {
+            return BadRequest("CPF e senha não podem ser nulos.");
+        }
+
         try
         {
-            var usuariosAtivos = await _aplicacaoUsuario.ListarAsync(true);
-            List<Usuario> listaUsuarios = usuariosAtivos.Select(x => new Usuario()
-            {
-                UsuarioId = x.UsuarioId,
-                Nome = x.Nome,
-                Sobrenome = x.Sobrenome,
-                Telefone = x.Telefone,
-                Senha = x.Senha,
-            }).ToList();
-
-            var usuarioAutenticado = listaUsuarios.FirstOrDefault(x => x.CPF == usuarioAutenticar.CPF && x.Senha == usuarioAutenticar.Senha);
+            var usuarioAutenticado = await _aplicacaoUsuario.Logar(usuarioAutenticar.CPF, usuarioAutenticar.Senha);
 
             if (usuarioAutenticado == null)
             {
@@ -165,6 +163,7 @@ public class UsuarioController : Controller
             return BadRequest(ex.Message);
         }
     }
+
 
     [HttpDelete("Delete/{usuarioId}")]
     public async Task<IActionResult> DeletarAsync([FromRoute] int usuarioId)
@@ -194,3 +193,4 @@ public class UsuarioController : Controller
         }
     }
 }
+

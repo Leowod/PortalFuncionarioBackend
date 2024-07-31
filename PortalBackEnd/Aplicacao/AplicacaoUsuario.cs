@@ -1,7 +1,6 @@
 using Dominio;
 using Repositorio;
 
-
 public class AplicacaoUsuario : IAplicacaoUsuario
 {
     private readonly IRepositorioUsuario _usuarioRepositorio;
@@ -11,11 +10,6 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         _usuarioRepositorio = usuarioRepositorio;
     }
 
-    public Task AlterarSenhaAsync(Usuario usuario, string novaSenha)
-    {
-        throw new NotImplementedException();
-    }
-
     public async Task AtualizarAsync(Usuario usuario)
     {
         var usuarioDominio = await _usuarioRepositorio.ObterIdAsync(usuario.UsuarioId);
@@ -23,7 +17,7 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         if (usuarioDominio == null)
             throw new Exception("Usuário não encontrado!");
 
-        ValidarInformacoesUsuario(usuario);
+        ValidarAlteracoesUsuario(usuario);
 
         usuarioDominio.Telefone = usuario.Telefone;
         usuarioDominio.Nome = usuario.Nome;
@@ -31,6 +25,7 @@ public class AplicacaoUsuario : IAplicacaoUsuario
 
         await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
     }
+
 
     public async Task DeletarAsync(int id)
     {
@@ -44,29 +39,36 @@ public class AplicacaoUsuario : IAplicacaoUsuario
 
         usuarioDominio.Deletar();
 
-        await _usuarioRepositorio.AtualizarAsync(usuarioDominio); ;
+        await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
     }
 
-    public Task<IEnumerable<Usuario>> ListarAsync(bool ativo)
+    public async Task<Usuario> Logar(string cpf, string senha)
     {
-        throw new NotImplementedException();
+        var usuariosAtivos = await _usuarioRepositorio.ListarAsync(true);
+
+        var usuario = usuariosAtivos.FirstOrDefault(x => x.CPF == cpf && x.Senha == senha);
+
+        if (usuario == null)
+            throw new Exception("Credenciais inválidas!");
+
+        return usuario;
     }
 
-    public Task<Usuario> Logar(string nomeUsuario, string senha)
+    public async Task AlterarSenhaAsync(Usuario usuario, string novaSenha)
     {
-        // if (!string.IsNullOrEmpty(nomeUsuario) || !string.IsNullOrEmpty(senha))
-        //     throw new Exception("Credenciais inválidas!");
+        var usuarioDominio = await _usuarioRepositorio.ObterIdAsync(usuario.UsuarioId);
 
-        // var usuarioDominio = await _usuarioRepositorio.OberNomeUsuarioAsync(nomeUsuario);
+        if (usuarioDominio == null)
+            throw new Exception("Usuário não encontrado!");
 
-        // if (usuarioDominio == null)
-        //     throw new Exception("Nome de Usuario invalido");
+        usuarioDominio.Senha = novaSenha;
 
-        // if (usuarioDominio.Senha != senha)
-        //     throw new Exception("Senha inválida!");
+        await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
+    }
 
-        // return usuarioDominio;
-        throw new NotImplementedException();
+    public async Task<IEnumerable<Usuario>> ListarAsync(bool ativo)
+    {
+        return await _usuarioRepositorio.ListarAsync(ativo);
     }
 
     public async Task<Usuario> ObterAsync(int id)
@@ -95,7 +97,7 @@ public class AplicacaoUsuario : IAplicacaoUsuario
     }
 
     public async Task<int> CriarAsync(Usuario usuario)
-    {       
+    {
         if (usuario == null)
             throw new Exception("Usuário não pode ser vazio!");
 
@@ -107,15 +109,32 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         return await _usuarioRepositorio.AdicionarAsync(usuario);
     }
 
-    private static void ValidarInformacoesUsuario(Usuario usuario)
+    private void ValidarInformacoesUsuario(Usuario usuario)
+{
+    if (string.IsNullOrEmpty(usuario.Nome))
+        throw new Exception("Nome não pode ser vazio.");
+
+    if (string.IsNullOrEmpty(usuario.Telefone))
+        throw new Exception("Telefone não pode ser vazio.");
+
+    if (string.IsNullOrEmpty(usuario.Sobrenome))
+        throw new Exception("Sobrenome não pode ser vazio.");
+
+    if (string.IsNullOrEmpty(usuario.CPF))
+        throw new Exception("CPF não pode ser vazio.");
+}
+
+
+    private void ValidarAlteracoesUsuario(Usuario usuario)
     {
-        if (usuario.CPF == null)
-            throw new Exception("CPF não pode ser vazio!");
+        if (string.IsNullOrEmpty(usuario.Nome))
+            throw new Exception("Nome não pode ser vazio.");
 
         if (string.IsNullOrEmpty(usuario.Telefone))
-            throw new Exception("Favor informar um número de telefone.");
+            throw new Exception("Telefone não pode ser vazio.");
 
         if (string.IsNullOrEmpty(usuario.Sobrenome))
             throw new Exception("Sobrenome não pode ser vazio.");
     }
+
 }
