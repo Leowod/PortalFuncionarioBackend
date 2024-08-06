@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj": {}
+    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj": {
+    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj",
+        "projectUniqueName": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj",
+        "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj",
         "packagesPath": "C:\\Users\\iterative\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\obj\\",
+        "outputPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iterative\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj": {
-                "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj"
+              "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj": {
+                "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj"
               },
-              "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj"
+              "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -93,14 +93,14 @@
         }
       }
     },
-    "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj": {
+    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj",
+        "projectUniqueName": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj",
         "projectName": "aplicacao",
-        "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj",
+        "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj",
         "packagesPath": "C:\\Users\\iterative\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\obj\\",
+        "outputPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iterative\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -117,11 +117,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj"
+              "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj"
               },
-              "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj": {
-                "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj"
+              "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj": {
+                "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj"
               }
             }
           }
@@ -169,14 +169,14 @@
         }
       }
     },
-    "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
+    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\iterative\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\obj\\",
+        "outputPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iterative\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -238,14 +238,14 @@
         }
       }
     },
-    "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj": {
+    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj",
+        "projectUniqueName": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj",
         "projectName": "Repositorio",
-        "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj",
+        "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj",
         "packagesPath": "C:\\Users\\iterative\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\obj\\",
+        "outputPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iterative\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -262,8 +262,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj"
+              "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj"
               }
             }
           }

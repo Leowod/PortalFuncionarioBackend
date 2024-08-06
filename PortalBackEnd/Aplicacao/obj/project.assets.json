@@ -1947,11 +1947,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj",
+      "projectUniqueName": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj",
       "projectName": "aplicacao",
-      "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj",
+      "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj",
       "packagesPath": "C:\\Users\\iterative\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\obj\\",
+      "outputPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\iterative\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1968,11 +1968,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj"
+            "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj"
             },
-            "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj": {
-              "projectPath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj"
+            "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj": {
+              "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj"
             }
           }
         }

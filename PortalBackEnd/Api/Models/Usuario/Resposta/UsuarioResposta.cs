@@ -7,7 +7,4 @@ public class UsuarioResposta
     public string? Telefone { get; set; }
     public string? Sobrenome { get; set; }
     public bool Ativo { get; set; }
-
-
-
 }

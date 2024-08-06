@@ -1,6 +1,7 @@
 using Dominio;
 using Repositorio;
 
+
 public class AplicacaoUsuario : IAplicacaoUsuario
 {
     private readonly IRepositorioUsuario _usuarioRepositorio;
@@ -109,23 +110,23 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         return await _usuarioRepositorio.AdicionarAsync(usuario);
     }
 
-    private void ValidarInformacoesUsuario(Usuario usuario)
-{
-    if (string.IsNullOrEmpty(usuario.Nome))
-        throw new Exception("Nome não pode ser vazio.");
+    private static void ValidarInformacoesUsuario(Usuario usuario)
+    {
+        if (string.IsNullOrEmpty(usuario.Nome))
+            throw new Exception("Nome não pode ser vazio.");
 
-    if (string.IsNullOrEmpty(usuario.Telefone))
-        throw new Exception("Telefone não pode ser vazio.");
+        if (string.IsNullOrEmpty(usuario.Telefone))
+            throw new Exception("Telefone não pode ser vazio.");
 
-    if (string.IsNullOrEmpty(usuario.Sobrenome))
-        throw new Exception("Sobrenome não pode ser vazio.");
+        if (string.IsNullOrEmpty(usuario.Sobrenome))
+            throw new Exception("Sobrenome não pode ser vazio.");
 
-    if (string.IsNullOrEmpty(usuario.CPF))
-        throw new Exception("CPF não pode ser vazio.");
-}
+        if (string.IsNullOrEmpty(usuario.CPF))
+            throw new Exception("CPF não pode ser vazio.");
+    }
 
 
-    private void ValidarAlteracoesUsuario(Usuario usuario)
+    private static void ValidarAlteracoesUsuario(Usuario usuario)
     {
         if (string.IsNullOrEmpty(usuario.Nome))
             throw new Exception("Nome não pode ser vazio.");
@@ -136,5 +137,4 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         if (string.IsNullOrEmpty(usuario.Sobrenome))
             throw new Exception("Sobrenome não pode ser vazio.");
     }
-
 }

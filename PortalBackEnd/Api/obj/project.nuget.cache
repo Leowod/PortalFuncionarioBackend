@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hrqxnwvpAc6pEwsfVJWQdG/z+5Vg74WGLzeyEgoTOLQWf8Kbe1yHmkDYwA+FeDbETL0yg9QUaKn1/vHX2UjDjg==",
+  "dgSpecHash": "nfx7HBulk5Tk/rsNjpPnTXiBSrFYLHiLaRx6RkZBnuLmfot/oWcCy/erS3Hgp53O5UYQMdomdbK1srCi3gVcUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\iterative\\Desktop\\temporario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj",
+  "projectFilePath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iterative\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\iterative\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

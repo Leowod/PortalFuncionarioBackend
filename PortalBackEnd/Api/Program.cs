@@ -1,9 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Swashbuckle.AspNetCore;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddScoped<IAplicacaoUsuario, AplicacaoUsuario>();
 builder.Services.AddScoped<IRepositorioUsuario, RepositorioUsuario>();
 
@@ -18,19 +17,19 @@ builder.Services.AddDbContext<Contexto>(options => options.UseSqlServer(builder.
 
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(builder =>
+    options.AddDefaultPolicy(policy =>
     {
-        builder.WithOrigins("http://localhost:3000")
-            .SetIsOriginAllowedToAllowWildcardSubdomains()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+        policy.WithOrigins("http://localhost:3000")
+              .SetIsOriginAllowedToAllowWildcardSubdomains()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
     });
 });
 
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
 

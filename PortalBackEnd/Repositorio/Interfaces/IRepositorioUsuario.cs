@@ -1,7 +1,5 @@
 using Dominio;
 
-
-
 public interface IRepositorioUsuario
 {
     Task<int> AdicionarAsync(Usuario usuario);

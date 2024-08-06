@@ -125,7 +125,7 @@ public class UsuarioController : Controller
 
         try
         {
-            Usuario usuario = new Usuario()
+            Usuario usuario = new()
             {
                 UsuarioId = usuarioAlterarSenha.Id
             };

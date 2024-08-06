@@ -1,7 +1,6 @@
 using Dominio;
 using Microsoft.EntityFrameworkCore;
 
-
 public class RepositorioUsuario : IRepositorioUsuario
 {
     private readonly Contexto _contexto;
