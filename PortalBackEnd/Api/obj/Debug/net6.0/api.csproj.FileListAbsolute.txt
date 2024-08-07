@@ -192,14 +192,8 @@ C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionari
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\api.csproj.CoreCompileInputs.cache
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\api.MvcApplicationPartsAssemblyInfo.cs
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\api.MvcApplicationPartsAssemblyInfo.cache
-C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\api.sourcelink.json
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\staticwebassets.build.json
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\staticwebassets.development.json
-C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\staticwebassets\msbuild.api.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\staticwebassets\msbuild.build.api.props
-C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.api.props
-C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.api.props
-C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\scopedcss\bundle\api.styles.css
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\api.csproj.CopyComplete
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Api\obj\Debug\net6.0\api.dll

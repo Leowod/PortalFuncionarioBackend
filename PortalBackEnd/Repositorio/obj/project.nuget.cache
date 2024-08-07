@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xoSxNl395ozQtdygZnE+gnp9X0qxH4YbLah8LzM2AfGFhoI5/KUuJWRn5QQq7DCdcsy4KsI8B0KcB1Dbn6qIsg==",
+  "dgSpecHash": "qi6LeVbRi+RajFZtm/mPCN37rnRkH4mzta4LITD9ni+Y8DMqK0GLY6wN/w6o9bGFeUBMmYnhOn9yCLd87H0oyg==",
   "success": true,
   "projectFilePath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Repositorio\\Repositorio.csproj",
   "expectedPackageFiles": [
@@ -46,10 +46,7 @@
     "C:\\Users\\iterative\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\iterative\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\iterative\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
-    "C:\\Users\\iterative\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\iterative\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\iterative\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\iterative\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
+    "C:\\Users\\iterative\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

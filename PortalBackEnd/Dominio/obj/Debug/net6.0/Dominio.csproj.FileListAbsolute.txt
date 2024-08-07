@@ -28,8 +28,8 @@ C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionari
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfoInputs.cache
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.AssemblyInfo.cs
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.csproj.CoreCompileInputs.cache
-C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.sourcelink.json
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.dll
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\refint\Dominio.dll
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.pdb
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\ref\Dominio.dll
+C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Dominio\obj\Debug\net6.0\Dominio.csproj.AssemblyReference.cache

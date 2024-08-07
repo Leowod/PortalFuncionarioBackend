@@ -44,7 +44,6 @@ C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionari
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.AssemblyInfoInputs.cache
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.AssemblyInfo.cs
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.csproj.CoreCompileInputs.cache
-C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.sourcelink.json
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.csproj.CopyComplete
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Repositorio\obj\Debug\net6.0\Repositorio.dll
 C:\Alunos\LeonardoDias\GitPortalDoFuncionario\PortalFuncionario\PortalFuncionarioBackend\PortalBackEnd\Repositorio\obj\Debug\net6.0\refint\Repositorio.dll

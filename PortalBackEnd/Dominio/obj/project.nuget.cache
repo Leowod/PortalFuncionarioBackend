@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LV9a5lqQTyExgiByiN3oJdpMICUESTQ6DmptLBTPDklr0mzzu4Hw1pOVWjWwU76WPsMGdqKwqtm4HzbTlBp6Zw==",
+  "dgSpecHash": "noyIODp8OgP1BI+Guyc4q5gdkPGoZ8ZQSDQjcf5VGDTD+tfN1itSFFoRcHidaRXNWSUl3yp6VyN78cmFbxyIrg==",
   "success": true,
   "projectFilePath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Dominio\\Dominio.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\iterative\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\iterative\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\iterative\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
