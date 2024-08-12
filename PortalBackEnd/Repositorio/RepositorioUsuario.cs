@@ -1,5 +1,7 @@
 using Dominio;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
 
 public class RepositorioUsuario : IRepositorioUsuario
 {
@@ -7,7 +9,7 @@ public class RepositorioUsuario : IRepositorioUsuario
 
     public RepositorioUsuario(Contexto contexto)
     {
-       _contexto = contexto;
+        _contexto = contexto;
     }
 
     public async Task<int> AdicionarAsync(Usuario usuario)
@@ -34,5 +36,14 @@ public class RepositorioUsuario : IRepositorioUsuario
         return await _contexto.Usuarios
                         .Where(x => x.UsuarioId == usuarioId)
                         .FirstOrDefaultAsync(x => x.UsuarioId == usuarioId);
+    }
+
+    public async Task<Usuario> ObterPorCpfAsync(string cpf)
+    {
+        if (string.IsNullOrEmpty(cpf))
+            throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
+
+        return await _contexto.Usuarios
+        .FirstOrDefaultAsync(u => u.CPF == cpf);        
     }
 }

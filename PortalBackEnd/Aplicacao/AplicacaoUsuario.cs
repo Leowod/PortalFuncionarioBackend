@@ -1,5 +1,8 @@
 using Dominio;
+using Microsoft.EntityFrameworkCore;
 using Repositorio;
+using System;
+using System.Threading.Tasks;
 
 
 public class AplicacaoUsuario : IAplicacaoUsuario
@@ -82,6 +85,20 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         return usuarioDominio;
     }
 
+    public async Task<Usuario> ObterPorCpfAsync(string cpf)
+    {
+        if (string.IsNullOrEmpty(cpf))
+            throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
+
+        var usuario = await _usuarioRepositorio.ObterPorCpfAsync(cpf);
+
+        if (usuario == null)
+            throw new Exception("Usuário não encontrado!");
+
+        return usuario;
+    }
+
+
     public async Task RestaurarAsync(int id)
     {
         var usuarioDominio = await _usuarioRepositorio.ObterIdAsync(id);
@@ -96,6 +113,22 @@ public class AplicacaoUsuario : IAplicacaoUsuario
 
         await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
     }
+
+    public async Task RestaurarPorCpfAsync(string cpf)
+    {
+        if (string.IsNullOrEmpty(cpf))
+            throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
+
+        var usuario = await _usuarioRepositorio.ObterPorCpfAsync(cpf);
+
+        if (usuario == null)
+            throw new Exception("Usuário não encontrado!");
+
+        usuario.Ativo = true;
+
+        await _usuarioRepositorio.AtualizarAsync(usuario);
+    }
+
 
     public async Task<int> CriarAsync(Usuario usuario)
     {

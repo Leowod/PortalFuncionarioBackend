@@ -9,6 +9,8 @@ public interface IAplicacaoUsuario
     Task AlterarSenhaAsync(Usuario usuario, string novaSenha);
     Task DeletarAsync(int id);
     Task RestaurarAsync(int id);
+    Task RestaurarPorCpfAsync(string cpf);
     Task<IEnumerable<Usuario>> ListarAsync(bool ativo);
     Task<Usuario> ObterAsync(int id);
+    Task<Usuario> ObterPorCpfAsync(string cpf);
 }

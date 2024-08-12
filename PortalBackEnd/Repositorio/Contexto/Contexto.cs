@@ -7,9 +7,7 @@ public class Contexto : DbContext
 {
     private readonly DbContextOptions _options;
 
-    public Contexto()
-    {
-    }
+    
     public Contexto(DbContextOptions options) : base(options)
     {
         _options = options;

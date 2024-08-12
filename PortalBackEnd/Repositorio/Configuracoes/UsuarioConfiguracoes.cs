@@ -10,11 +10,13 @@ public class UsuarioConfiguracoes : IEntityTypeConfiguration<Usuario>
     {
         builder.ToTable("Usuario").HasKey(x => x.UsuarioId);
         builder.Property(nameof(Usuario.UsuarioId)).HasColumnName("UsuarioId");
-        builder.Property(nameof(Usuario.CPF)).HasColumnName("CPF");
+        builder.Property(nameof(Usuario.Nome)).HasColumnName("Nome");
+        builder.Property(nameof(Usuario.Sobrenome)).HasColumnName("Sobrenome");
+        builder.Property(nameof(Usuario.CPF)).HasColumnName("CPF");        
         builder.Property(nameof(Usuario.Telefone)).HasColumnName("Telefone");
+        builder.Property(nameof(Usuario.Endereco)).HasColumnName("Endereço");
         builder.Property(nameof(Usuario.Senha)).HasColumnName("Senha");
         builder.Property(nameof(Usuario.Ativo)).HasColumnName("Ativo");
-        builder.Property(nameof(Usuario.Nome)).HasColumnName("Nome");
-        builder.Property(nameof(Usuario.Sobrenome)).HasColumnName("Sobrenome");        
+
     }
 }

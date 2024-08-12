@@ -34,6 +34,7 @@ public class UsuarioController : Controller
                 Nome = usuario.Nome,
                 Sobrenome = usuario.Sobrenome,
                 Telefone = usuario.Telefone,
+                Endereco = usuario.Endereco,
                 Ativo = usuario.Ativo,
             };
 
@@ -58,6 +59,7 @@ public class UsuarioController : Controller
                 Nome = usuario.Nome,
                 Sobrenome = usuario.Sobrenome,
                 Telefone = usuario.Telefone,
+                Endereco = usuario.Endereco,
                 Ativo = usuario.Ativo,
             }).ToList();
 
@@ -80,6 +82,7 @@ public class UsuarioController : Controller
                 CPF = usuario.CPF,
                 Senha = usuario.Senha,
                 Telefone = usuario.Telefone,
+                Endereco = usuario.Endereco,
                 Sobrenome = usuario.Sobrenome
             };
             var usuarioCriado = await _aplicacaoUsuario.CriarAsync(criarUsuario);
@@ -102,6 +105,7 @@ public class UsuarioController : Controller
                 Nome = usuarioAtualizar.Nome,
                 Sobrenome = usuarioAtualizar.Sobrenome,
                 Telefone = usuarioAtualizar.Telefone,
+                Endereco = usuarioAtualizar.Endereco,
             };
 
             await _aplicacaoUsuario.AtualizarAsync(usuario);
@@ -145,7 +149,7 @@ public class UsuarioController : Controller
     {
         if (usuarioAutenticar.CPF == null || usuarioAutenticar.Senha == null)
         {
-            return BadRequest("CPF e senha não podem ser nulos.");
+            return BadRequest("Preencha todos os campos.");
         }
 
         try
@@ -192,5 +196,33 @@ public class UsuarioController : Controller
             return BadRequest(ex.Message);
         }
     }
+
+    [HttpGet("Restaurar/{cpf}")]
+    public async Task<IActionResult> RestaurarPorCpfAsync([FromRoute] string cpf)
+    {
+        try
+        {
+            var usuario = await _aplicacaoUsuario.ObterPorCpfAsync(cpf);
+
+            if (usuario == null)
+            {
+                return NotFound(new { mensagem = "Usuário não encontrado." });
+            }
+
+            if (!usuario.Ativo)
+            {
+                await _aplicacaoUsuario.RestaurarPorCpfAsync(cpf);
+                return Ok(new { mensagem = "Usuário restaurado com sucesso." });
+            }
+
+            return BadRequest(new { mensagem = "Usuário já está ativo." });
+        }
+        catch (Exception)
+        {
+            return StatusCode(500, new { mensagem = "Erro ao verificar CPF. Tente novamente mais tarde." });
+        }
+    }
+
+
 }
 
