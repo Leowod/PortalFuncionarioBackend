@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Dominio;
+using System.Text.RegularExpressions;
 
 
 namespace Api;
@@ -200,6 +201,16 @@ public class UsuarioController : Controller
     [HttpGet("Restaurar/{cpf}")]
     public async Task<IActionResult> RestaurarPorCpfAsync([FromRoute] string cpf)
     {
+        if (string.IsNullOrWhiteSpace(cpf))
+        {
+            return BadRequest(new { mensagem = "CPF não pode ser nulo ou vazio." });
+        }
+
+        if (!IsValidCpfFormat(cpf))
+        {
+            return BadRequest(new { mensagem = "Formato de CPF inválido." });
+        }
+
         try
         {
             var usuario = await _aplicacaoUsuario.ObterPorCpfAsync(cpf);
@@ -217,12 +228,17 @@ public class UsuarioController : Controller
 
             return BadRequest(new { mensagem = "Usuário já está ativo." });
         }
-        catch (Exception)
-        {
-            return StatusCode(500, new { mensagem = "Erro ao verificar CPF. Tente novamente mais tarde." });
-        }
+        catch (Exception ex)
+    {
+        Console.WriteLine("Exception: " + ex.Message);
+        return StatusCode(500, new { mensagem = "Erro ao verificar CPF. Tente novamente mais tarde." });
+    }
     }
 
+    private static bool IsValidCpfFormat(string cpf)
+    {
+        return Regex.IsMatch(cpf, @"^\d{3}\.\d{3}\.\d{3}-\d{2}$");
+    }
 
 }
 
