@@ -1,7 +1,6 @@
 using Dominio;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
+
 
 public class RepositorioUsuario : IRepositorioUsuario
 {
