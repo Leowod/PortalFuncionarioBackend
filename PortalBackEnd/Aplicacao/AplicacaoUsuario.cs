@@ -158,7 +158,6 @@ public class AplicacaoUsuario : IAplicacaoUsuario
             throw new Exception("CPF não pode ser vazio.");
     }
 
-
     private static void ValidarAlteracoesUsuario(Usuario usuario)
     {
         if (string.IsNullOrEmpty(usuario.Nome))
