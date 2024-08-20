@@ -26,16 +26,18 @@ public class RepositorioUsuario : IRepositorioUsuario
     }
 
     public async Task<IEnumerable<Usuario>> ListarAsync(bool ativo)
-    {
-        return await Task.FromResult<IEnumerable<Usuario>>(_contexto.Usuarios.Where(x => x.Ativo == ativo));
-    }
+{
+    return await _contexto.Usuarios
+        .Where(x => x.Ativo == ativo)
+        .ToListAsync();
+}
 
-    public async Task<Usuario> ObterIdAsync(int usuarioId)
-    {
-        return await _contexto.Usuarios
-                        .Where(x => x.UsuarioId == usuarioId)
-                        .FirstOrDefaultAsync(x => x.UsuarioId == usuarioId);
-    }
+   public async Task<Usuario> ObterIdAsync(int usuarioId)
+{
+    return await _contexto.Usuarios
+        .Where(x => x.UsuarioId == usuarioId)
+        .FirstOrDefaultAsync();
+}
 
     public async Task<Usuario> ObterPorCpfAsync(string cpf)
     {

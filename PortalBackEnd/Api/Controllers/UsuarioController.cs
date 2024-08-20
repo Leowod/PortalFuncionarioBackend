@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Dominio;
 using System.Text.RegularExpressions;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Api;
@@ -119,6 +121,44 @@ public class UsuarioController : Controller
         }
     }
 
+    [HttpPut("Atualizar")]
+    public async Task<IActionResult> AtualizarUsuario([FromBody] UsuarioAtualizar usuarioAtualizado)
+    {
+        var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+        if (userId == null)
+        {
+            return Unauthorized("Usuário não autorizado.");
+        }
+
+        if (!int.TryParse(userId, out var id))
+        {
+            return BadRequest("ID do usuário inválido.");
+        }
+
+        var usuarioExistente = await _aplicacaoUsuario.ObterAsync(id);
+
+        if (usuarioExistente == null)
+        {
+            return NotFound("Usuário não encontrado.");
+        }
+
+        usuarioExistente.Nome = usuarioAtualizado.Nome;
+        usuarioExistente.Sobrenome = usuarioAtualizado.Sobrenome;
+        usuarioExistente.Telefone = usuarioAtualizado.Telefone;
+        usuarioExistente.Endereco = usuarioAtualizado.Endereco;
+
+        try
+        {
+            await _aplicacaoUsuario.AtualizarAsync(usuarioExistente);
+            return Ok(usuarioExistente);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
 
     [HttpPut("AlterarSenha")]
     public async Task<IActionResult> AlterarSenhaAsync([FromBody] UsuarioAlterarSenha usuarioAlterarSenha)
@@ -184,6 +224,31 @@ public class UsuarioController : Controller
         }
     }
 
+    [HttpDelete("Delete")]
+    [Authorize]
+    public async Task<IActionResult> DeletarUsuarioLogado()
+    {
+
+        var cpf = User.FindFirst(ClaimTypes.Name)?.Value;
+
+        if (cpf == null)
+        {
+            return Unauthorized("Usuário não autenticado.");
+        }
+
+        try
+        {
+            await _aplicacaoUsuario.DeletarUsuarioLogado(cpf);
+            return Ok("Usuário desativado com sucesso.");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+
+
     [HttpPut("Restaurar/{usuarioId}")]
     public async Task<IActionResult> RestaurarAsync([FromRoute] int usuarioId)
     {
@@ -229,10 +294,10 @@ public class UsuarioController : Controller
             return BadRequest(new { mensagem = "Usuário já está ativo." });
         }
         catch (Exception ex)
-    {
-        Console.WriteLine("Exception: " + ex.Message);
-        return StatusCode(500, new { mensagem = "Erro ao verificar CPF. Tente novamente mais tarde." });
-    }
+        {
+            Console.WriteLine("Exception: " + ex.Message);
+            return StatusCode(500, new { mensagem = "Erro ao verificar CPF. Tente novamente mais tarde." });
+        }
     }
 
     private static bool IsValidCpfFormat(string cpf)
@@ -241,4 +306,3 @@ public class UsuarioController : Controller
     }
 
 }
-

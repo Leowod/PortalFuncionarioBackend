@@ -30,6 +30,27 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
     }
 
+    public async Task AtualizarUsuarioLogado(string cpf, Usuario usuarioAtualizado)
+{
+    if (string.IsNullOrEmpty(cpf))
+        throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
+    
+    var usuarioDominio = await _usuarioRepositorio.ObterPorCpfAsync(cpf);
+
+    if (usuarioDominio == null)
+        throw new Exception("Usuário não encontrado!");
+
+    
+    ValidarAlteracoesUsuario(usuarioAtualizado);
+    
+    usuarioDominio.Telefone = usuarioAtualizado.Telefone;
+    usuarioDominio.Nome = usuarioAtualizado.Nome;
+    usuarioDominio.Sobrenome = usuarioAtualizado.Sobrenome;
+    
+    await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
+}
+
+
 
     public async Task DeletarAsync(int id)
     {
@@ -45,6 +66,25 @@ public class AplicacaoUsuario : IAplicacaoUsuario
 
         await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
     }
+
+    public async Task DeletarUsuarioLogado(string cpf)
+{
+    if (string.IsNullOrEmpty(cpf))
+        throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
+
+    var usuarioDominio = await _usuarioRepositorio.ObterPorCpfAsync(cpf);
+
+    if (usuarioDominio == null)
+        throw new Exception("Usuário não encontrado!");
+
+    if (usuarioDominio.Ativo == false)
+        throw new Exception("Usuário já deletado");
+
+    usuarioDominio.Deletar();
+
+    await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
+}
+
 
     public async Task<Usuario> Logar(string cpf, string senha)
     {
