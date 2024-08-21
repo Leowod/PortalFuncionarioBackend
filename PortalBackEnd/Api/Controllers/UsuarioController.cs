@@ -113,7 +113,17 @@ public class UsuarioController : Controller
 
             await _aplicacaoUsuario.AtualizarAsync(usuario);
 
-            return Ok();
+            var usuarioResposta = new UsuarioResposta()
+            {
+                Id = usuario.UsuarioId,
+                Nome = usuario.Nome,
+                Sobrenome = usuario.Sobrenome,
+                Telefone = usuario.Telefone,
+                Endereco = usuario.Endereco,
+                Ativo = usuario.Ativo,
+            };
+            
+            return Ok(usuarioResposta);
         }
         catch (Exception ex)
         {
@@ -121,7 +131,7 @@ public class UsuarioController : Controller
         }
     }
 
-    [HttpPut("Atualizar")]
+    [HttpPut("Atualiza")]
     public async Task<IActionResult> AtualizarUsuario([FromBody] UsuarioAtualizar usuarioAtualizado)
     {
         var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -158,6 +168,7 @@ public class UsuarioController : Controller
             return BadRequest(ex.Message);
         }
     }
+
 
 
     [HttpPut("AlterarSenha")]
@@ -224,28 +235,28 @@ public class UsuarioController : Controller
         }
     }
 
-    [HttpDelete("Delete")]
-    [Authorize]
-    public async Task<IActionResult> DeletarUsuarioLogado()
-    {
+    // [HttpDelete("Delete")]
+    // [Authorize]
+    // public async Task<IActionResult> DeletarUsuarioLogado()
+    // {
 
-        var cpf = User.FindFirst(ClaimTypes.Name)?.Value;
+    //     var cpf = User.FindFirst(ClaimTypes.Name)?.Value;
 
-        if (cpf == null)
-        {
-            return Unauthorized("Usuário não autenticado.");
-        }
+    //     if (cpf == null)
+    //     {
+    //         return Unauthorized("Usuário não autenticado.");
+    //     }
 
-        try
-        {
-            await _aplicacaoUsuario.DeletarUsuarioLogado(cpf);
-            return Ok("Usuário desativado com sucesso.");
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
-    }
+    //     try
+    //     {
+    //         await _aplicacaoUsuario.DeletarUsuarioLogado(cpf);
+    //         return Ok("Usuário desativado com sucesso.");
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         return BadRequest(ex.Message);
+    //     }
+    // }
 
 
 

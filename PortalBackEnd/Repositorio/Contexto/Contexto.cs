@@ -18,7 +18,7 @@ public class Contexto : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (_options == null)
-            optionsBuilder.UseSqlServer("Server=DESKTOP-58UEHOH;Database=portal_db;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-58UEHOH;Database=portal_db;Trusted_Connection=True;TrustServerCertificate=True; Timeout=60");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

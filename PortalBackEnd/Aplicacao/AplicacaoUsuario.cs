@@ -26,29 +26,30 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         usuarioDominio.Telefone = usuario.Telefone;
         usuarioDominio.Nome = usuario.Nome;
         usuarioDominio.Sobrenome = usuario.Sobrenome;
+        usuarioDominio.Endereco = usuario.Endereco;
 
         await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
     }
 
     public async Task AtualizarUsuarioLogado(string cpf, Usuario usuarioAtualizado)
-{
-    if (string.IsNullOrEmpty(cpf))
-        throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
-    
-    var usuarioDominio = await _usuarioRepositorio.ObterPorCpfAsync(cpf);
+    {
+        if (string.IsNullOrEmpty(cpf))
+            throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
 
-    if (usuarioDominio == null)
-        throw new Exception("Usuário não encontrado!");
+        var usuarioDominio = await _usuarioRepositorio.ObterPorCpfAsync(cpf);
 
-    
-    ValidarAlteracoesUsuario(usuarioAtualizado);
-    
-    usuarioDominio.Telefone = usuarioAtualizado.Telefone;
-    usuarioDominio.Nome = usuarioAtualizado.Nome;
-    usuarioDominio.Sobrenome = usuarioAtualizado.Sobrenome;
-    
-    await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
-}
+        if (usuarioDominio == null)
+            throw new Exception("Usuário não encontrado!");
+
+
+        ValidarAlteracoesUsuario(usuarioAtualizado);
+
+        usuarioDominio.Telefone = usuarioAtualizado.Telefone;
+        usuarioDominio.Nome = usuarioAtualizado.Nome;
+        usuarioDominio.Sobrenome = usuarioAtualizado.Sobrenome;
+
+        await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
+    }
 
 
 
@@ -68,22 +69,22 @@ public class AplicacaoUsuario : IAplicacaoUsuario
     }
 
     public async Task DeletarUsuarioLogado(string cpf)
-{
-    if (string.IsNullOrEmpty(cpf))
-        throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
+    {
+        if (string.IsNullOrEmpty(cpf))
+            throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
 
-    var usuarioDominio = await _usuarioRepositorio.ObterPorCpfAsync(cpf);
+        var usuarioDominio = await _usuarioRepositorio.ObterPorCpfAsync(cpf);
 
-    if (usuarioDominio == null)
-        throw new Exception("Usuário não encontrado!");
+        if (usuarioDominio == null)
+            throw new Exception("Usuário não encontrado!");
 
-    if (usuarioDominio.Ativo == false)
-        throw new Exception("Usuário já deletado");
+        if (usuarioDominio.Ativo == false)
+            throw new Exception("Usuário já deletado");
 
-    usuarioDominio.Deletar();
+        usuarioDominio.Deletar();
 
-    await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
-}
+        await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
+    }
 
 
     public async Task<Usuario> Logar(string cpf, string senha)
@@ -178,27 +179,61 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         if (string.IsNullOrEmpty(usuario.Nome))
             throw new Exception("Nome não pode ser vazio!");
 
-        ValidarInformacoesUsuario(usuario);
+        if (string.IsNullOrWhiteSpace(usuario.Nome))
+            throw new Exception("Nome não pode ser vazio.");
+
+        if (string.IsNullOrWhiteSpace(usuario.Telefone))
+            throw new Exception("Telefone não pode ser vazio.");
+
+        if (string.IsNullOrWhiteSpace(usuario.Sobrenome))
+            throw new Exception("Sobrenome não pode ser vazio.");
+
+        if (string.IsNullOrWhiteSpace(usuario.Endereco))
+            throw new Exception("Endereço não pode ser vazio.");
+
+        if (string.IsNullOrWhiteSpace(usuario.Senha))
+            throw new Exception("Senha não pode ser vazia.");
+
+        if (string.IsNullOrWhiteSpace(usuario.CPF))
+            throw new Exception("CPF não pode ser vazio.");
+
+        var usuarioCpf = await _usuarioRepositorio.ObterPorCpfAsync(usuario.CPF);
+
+        if (usuarioCpf != null)
+            throw new Exception("CPF já cadastrado.");
+
 
         return await _usuarioRepositorio.AdicionarAsync(usuario);
     }
 
-    private static void ValidarInformacoesUsuario(Usuario usuario)
+    async void ValidarInformacoesUsuario(Usuario usuario)
     {
-        if (string.IsNullOrEmpty(usuario.Nome))
+        if (string.IsNullOrWhiteSpace(usuario.Nome))
             throw new Exception("Nome não pode ser vazio.");
 
-        if (string.IsNullOrEmpty(usuario.Telefone))
+        if (string.IsNullOrWhiteSpace(usuario.Telefone))
             throw new Exception("Telefone não pode ser vazio.");
 
-        if (string.IsNullOrEmpty(usuario.Sobrenome))
+        if (string.IsNullOrWhiteSpace(usuario.Sobrenome))
             throw new Exception("Sobrenome não pode ser vazio.");
 
-        if (string.IsNullOrEmpty(usuario.CPF))
+        if (string.IsNullOrWhiteSpace(usuario.Endereco))
+            throw new Exception("Endereço não pode ser vazio.");
+
+        if (string.IsNullOrWhiteSpace(usuario.Senha))
+            throw new Exception("Senha não pode ser vazia.");
+
+        if (string.IsNullOrWhiteSpace(usuario.CPF))
             throw new Exception("CPF não pode ser vazio.");
+
+        var usuarioCpf = await _usuarioRepositorio.ObterPorCpfAsync(usuario.CPF);
+
+        if (usuarioCpf != null)
+            throw new Exception("CPF já cadastrado.");
+
     }
 
-    private static void ValidarAlteracoesUsuario(Usuario usuario)
+    static void ValidarAlteracoesUsuario(Usuario usuario)
     {
         if (string.IsNullOrEmpty(usuario.Nome))
             throw new Exception("Nome não pode ser vazio.");

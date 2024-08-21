@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj": {}
+    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj": {}
   },
   "projects": {
-    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj": {
+    "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj",
+        "projectUniqueName": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj",
         "projectName": "aplicacao",
-        "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\aplicacao.csproj",
+        "projectPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\aplicacao.csproj",
         "packagesPath": "C:\\Users\\iterative\\.nuget\\packages\\",
-        "outputPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\Aplicacao\\obj\\",
+        "outputPath": "C:\\Alunos\\LeonardoDias\\GitPortalDoFuncionario\\PortalFuncionario\\PortalFuncionarioBackend\\PortalBackEnd\\aplicacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\iterative\\AppData\\Roaming\\NuGet\\NuGet.Config",

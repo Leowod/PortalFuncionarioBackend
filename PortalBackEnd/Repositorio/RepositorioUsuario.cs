@@ -26,25 +26,25 @@ public class RepositorioUsuario : IRepositorioUsuario
     }
 
     public async Task<IEnumerable<Usuario>> ListarAsync(bool ativo)
-{
-    return await _contexto.Usuarios
-        .Where(x => x.Ativo == ativo)
-        .ToListAsync();
-}
+    {
+        return await _contexto.Usuarios
+            .Where(x => x.Ativo == ativo)
+            .ToListAsync();
+    }
 
-   public async Task<Usuario> ObterIdAsync(int usuarioId)
-{
-    return await _contexto.Usuarios
-        .Where(x => x.UsuarioId == usuarioId)
-        .FirstOrDefaultAsync();
-}
+    public async Task<Usuario> ObterIdAsync(int usuarioId)
+    {
+        return await _contexto.Usuarios
+            .Where(x => x.UsuarioId == usuarioId)
+            .FirstOrDefaultAsync();
+    }
 
     public async Task<Usuario> ObterPorCpfAsync(string cpf)
     {
         if (string.IsNullOrEmpty(cpf))
-            throw new ArgumentException("CPF não pode ser vazio!", nameof(cpf));
+            throw new ArgumentException("CPF não pode ser vazio!", cpf);
 
-        return await _contexto.Usuarios
-        .FirstOrDefaultAsync(u => u.CPF == cpf);        
+        var user = _contexto.Usuarios.FirstOrDefault(u => u.CPF == cpf);
+        return user;
     }
 }
