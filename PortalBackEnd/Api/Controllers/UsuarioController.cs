@@ -122,7 +122,7 @@ public class UsuarioController : Controller
                 Endereco = usuario.Endereco,
                 Ativo = usuario.Ativo,
             };
-            
+
             return Ok(usuarioResposta);
         }
         catch (Exception ex)
@@ -170,7 +170,6 @@ public class UsuarioController : Controller
     }
 
 
-
     [HttpPut("AlterarSenha")]
     public async Task<IActionResult> AlterarSenhaAsync([FromBody] UsuarioAlterarSenha usuarioAlterarSenha)
     {
@@ -181,12 +180,7 @@ public class UsuarioController : Controller
 
         try
         {
-            Usuario usuario = new()
-            {
-                UsuarioId = usuarioAlterarSenha.Id
-            };
-
-            await _aplicacaoUsuario.AlterarSenhaAsync(usuario, usuarioAlterarSenha.NovaSenha);
+            await _aplicacaoUsuario.AlterarSenhaAsync(usuarioAlterarSenha.Id, usuarioAlterarSenha.Senha, usuarioAlterarSenha.NovaSenha);
             return Ok();
         }
         catch (Exception ex)

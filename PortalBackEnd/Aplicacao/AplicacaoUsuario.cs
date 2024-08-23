@@ -21,7 +21,17 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         if (usuarioDominio == null)
             throw new Exception("Usuário não encontrado!");
 
-        ValidarAlteracoesUsuario(usuario);
+        if (string.IsNullOrWhiteSpace(usuario.Nome))
+            throw new Exception("Nome não pode ser vazio.");
+
+        if (string.IsNullOrWhiteSpace(usuario.Telefone))
+            throw new Exception("Telefone não pode ser vazio.");
+
+        if (string.IsNullOrWhiteSpace(usuario.Sobrenome))
+            throw new Exception("Sobrenome não pode ser vazio.");
+
+        if (string.IsNullOrWhiteSpace(usuario.Endereco))
+            throw new Exception("Endereço não pode ser vazio.");
 
         usuarioDominio.Telefone = usuario.Telefone;
         usuarioDominio.Nome = usuario.Nome;
@@ -99,12 +109,15 @@ public class AplicacaoUsuario : IAplicacaoUsuario
         return usuario;
     }
 
-    public async Task AlterarSenhaAsync(Usuario usuario, string novaSenha)
+    public async Task AlterarSenhaAsync(int id, string senha, string novaSenha)
     {
-        var usuarioDominio = await _usuarioRepositorio.ObterIdAsync(usuario.UsuarioId);
+        var usuarioDominio = await _usuarioRepositorio.ObterIdAsync(id);
 
         if (usuarioDominio == null)
             throw new Exception("Usuário não encontrado!");
+
+        if (usuarioDominio.Senha != senha)
+            throw new Exception("Senha atual incorreta!");
 
         usuarioDominio.Senha = novaSenha;
 
