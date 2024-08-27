@@ -19,6 +19,7 @@ public class RepositorioUsuario : IRepositorioUsuario
         return usuario.UsuarioId;
     }
 
+
     public async Task AtualizarAsync(Usuario usuario)
     {
         _contexto.Usuarios.Update(usuario);

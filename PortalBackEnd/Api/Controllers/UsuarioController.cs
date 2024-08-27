@@ -31,6 +31,12 @@ public class UsuarioController : Controller
         try
         {
             var usuario = await _aplicacaoUsuario.ObterAsync(usuarioId);
+
+            if (usuario == null)
+            {
+                return NotFound($"Usuário com ID {usuarioId} não encontrado.");
+            }
+
             var usuarioResposta = new UsuarioResposta()
             {
                 Id = usuario.UsuarioId,
@@ -45,10 +51,9 @@ public class UsuarioController : Controller
         }
         catch (Exception ex)
         {
-            return BadRequest(ex.Message);
+            return BadRequest($"Erro ao obter o usuário: {ex.Message}");
         }
     }
-
 
     [HttpGet("Listar")]
     public async Task<IActionResult> ListarAsync([FromQuery] bool ativo)
@@ -216,7 +221,7 @@ public class UsuarioController : Controller
 
 
     [HttpDelete("Delete/{usuarioId}")]
-    public async Task<IActionResult> DeletarAsync([FromRoute] int usuarioId)
+    public async Task<IActionResult> DeletarAsync(int usuarioId)
     {
         try
         {
@@ -228,31 +233,6 @@ public class UsuarioController : Controller
             return BadRequest(ex.Message);
         }
     }
-
-    // [HttpDelete("Delete")]
-    // [Authorize]
-    // public async Task<IActionResult> DeletarUsuarioLogado()
-    // {
-
-    //     var cpf = User.FindFirst(ClaimTypes.Name)?.Value;
-
-    //     if (cpf == null)
-    //     {
-    //         return Unauthorized("Usuário não autenticado.");
-    //     }
-
-    //     try
-    //     {
-    //         await _aplicacaoUsuario.DeletarUsuarioLogado(cpf);
-    //         return Ok("Usuário desativado com sucesso.");
-    //     }
-    //     catch (Exception ex)
-    //     {
-    //         return BadRequest(ex.Message);
-    //     }
-    // }
-
-
 
     [HttpPut("Restaurar/{usuarioId}")]
     public async Task<IActionResult> RestaurarAsync([FromRoute] int usuarioId)
